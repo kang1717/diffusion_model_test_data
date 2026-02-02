@@ -1,0 +1,15 @@
+name1="Ag12K8S10"   # name of the folder
+
+python primitive.py $name1
+
+cd "$name1"
+cp ../oneshot.py .
+python oneshot.py
+cd ../
+
+python remove_duplicatem.py $name1
+
+cd "$name1"
+cp ../relax.py .
+python relax.py
+cd ../

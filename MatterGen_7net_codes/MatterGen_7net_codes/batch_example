@@ -1,0 +1,17 @@
+name1="Al6Ca1Cu4Pr1" # folder name
+
+
+python primitive.py $name1 
+
+cd "$name1"
+cp ../oneshot.py .
+python oneshot.py --target_formula $name1
+cd ../
+
+python remove_duplicatem.py $name1
+
+cd "$name1"
+cp ../relax.py .
+python relax.py 
+
+exit 0
